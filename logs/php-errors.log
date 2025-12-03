@@ -1,0 +1,142 @@
+[24-Nov-2025 09:38:20 Europe/Berlin] place-order.php: Started
+[24-Nov-2025 09:38:20 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":2,"name":"CAMERA VELAT","quantity":1}]}
+[24-Nov-2025 09:38:20 Europe/Berlin] place-order.php: User ID: 1
+[24-Nov-2025 09:38:20 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09925563521","address":"Joshua Calago"}
+[24-Nov-2025 09:38:20 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09925563521, Items: 1
+[24-Nov-2025 09:38:20 Europe/Berlin] place-order.php: Order created with ID: 11
+[24-Nov-2025 09:38:20 Europe/Berlin] place-order.php: Adding item - ID: 2, Name: CAMERA VELAT, Qty: 1
+[24-Nov-2025 09:38:20 Europe/Berlin] place-order.php: Order completed successfully
+[24-Nov-2025 10:18:57 Europe/Berlin] place-order.php: Started
+[24-Nov-2025 10:18:57 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":2,"name":"CAMERA VELAT","quantity":1}]}
+[24-Nov-2025 10:18:57 Europe/Berlin] place-order.php: User ID: 1
+[24-Nov-2025 10:18:57 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09925563521","address":"Joshua Calago"}
+[24-Nov-2025 10:18:57 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09925563521, Items: 1
+[24-Nov-2025 10:18:57 Europe/Berlin] place-order.php: Order created with ID: 12
+[24-Nov-2025 10:18:57 Europe/Berlin] place-order.php: Adding item - ID: 2, Name: CAMERA VELAT, Qty: 1
+[24-Nov-2025 10:18:57 Europe/Berlin] place-order.php: Order completed successfully
+[24-Nov-2025 11:14:04 Europe/Berlin] place-order.php: Started
+[24-Nov-2025 11:14:04 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":3,"name":"Audrey","quantity":1}]}
+[24-Nov-2025 11:14:04 Europe/Berlin] place-order.php: User ID: 1
+[24-Nov-2025 11:14:04 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09925563521","address":"Joshua Calago"}
+[24-Nov-2025 11:14:04 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09925563521, Items: 1
+[24-Nov-2025 11:14:04 Europe/Berlin] place-order.php: Order created with ID: 13
+[24-Nov-2025 11:14:04 Europe/Berlin] place-order.php: Adding item - ID: 3, Name: Audrey, Qty: 1
+[24-Nov-2025 11:14:04 Europe/Berlin] place-order.php: Order completed successfully
+[24-Nov-2025 11:18:05 Europe/Berlin] place-order.php: Started
+[24-Nov-2025 11:18:05 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":3,"name":"Audrey","quantity":1}]}
+[24-Nov-2025 11:18:05 Europe/Berlin] place-order.php: User ID: 2
+[24-Nov-2025 11:18:05 Europe/Berlin] place-order.php: User data: {"first_name":"faith","last_name":"saludaga","phone":"0923232323","address":"ylaya ibabao"}
+[24-Nov-2025 11:18:05 Europe/Berlin] place-order.php: Creating order - Name: faith saludaga, Phone: 0923232323, Items: 1
+[24-Nov-2025 11:18:05 Europe/Berlin] place-order.php: Order created with ID: 14
+[24-Nov-2025 11:18:05 Europe/Berlin] place-order.php: Adding item - ID: 3, Name: Audrey, Qty: 1
+[24-Nov-2025 11:18:05 Europe/Berlin] place-order.php: Order completed successfully
+[24-Nov-2025 13:25:56 Europe/Berlin] place-order.php: Started
+[24-Nov-2025 13:25:56 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":2,"name":"CAMERA VELAT","quantity":1}]}
+[24-Nov-2025 13:25:56 Europe/Berlin] place-order.php: User ID: 1
+[24-Nov-2025 13:25:56 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09925563521","address":"Joshua Calago"}
+[24-Nov-2025 13:25:56 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09925563521, Items: 1
+[24-Nov-2025 13:25:56 Europe/Berlin] place-order.php: Order created with ID: 15
+[24-Nov-2025 13:25:56 Europe/Berlin] place-order.php: Adding item - ID: 2, Name: CAMERA VELAT, Qty: 1
+[24-Nov-2025 13:25:56 Europe/Berlin] place-order.php: Order completed successfully
+[25-Nov-2025 00:28:08 Europe/Berlin] place-order.php: Started
+[25-Nov-2025 00:28:08 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":3,"name":"Audrey","quantity":1}]}
+[25-Nov-2025 00:28:08 Europe/Berlin] place-order.php: User ID: 1
+[25-Nov-2025 00:28:08 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09925563521","address":"Joshua Calago"}
+[25-Nov-2025 00:28:08 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09925563521, Items: 1
+[25-Nov-2025 00:28:08 Europe/Berlin] place-order.php: Order created with ID: 16
+[25-Nov-2025 00:28:08 Europe/Berlin] place-order.php: Adding item - ID: 3, Name: Audrey, Qty: 1
+[25-Nov-2025 00:28:08 Europe/Berlin] place-order.php: Order completed successfully
+[25-Nov-2025 03:39:51 Europe/Berlin] place-order.php: Started
+[25-Nov-2025 03:39:51 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":3,"name":"Audrey","quantity":1}]}
+[25-Nov-2025 03:39:51 Europe/Berlin] place-order.php: User ID: 1
+[25-Nov-2025 03:39:51 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09925563521","address":"Joshua Calago"}
+[25-Nov-2025 03:39:51 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09925563521, Items: 1
+[25-Nov-2025 03:39:51 Europe/Berlin] place-order.php: Order created with ID: 17
+[25-Nov-2025 03:39:51 Europe/Berlin] place-order.php: Adding item - ID: 3, Name: Audrey, Qty: 1
+[25-Nov-2025 03:39:51 Europe/Berlin] place-order.php: Order completed successfully
+[25-Nov-2025 04:20:21 Europe/Berlin] place-order.php: Started
+[25-Nov-2025 04:20:21 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":2,"name":"CAMERA VELAT","quantity":1}]}
+[25-Nov-2025 04:20:21 Europe/Berlin] place-order.php: User ID: 2
+[25-Nov-2025 04:20:21 Europe/Berlin] place-order.php: User data: {"first_name":"faith","last_name":"saludaga","phone":"0923232323","address":"ylaya ibabao"}
+[25-Nov-2025 04:20:21 Europe/Berlin] place-order.php: Creating order - Name: faith saludaga, Phone: 0923232323, Items: 1
+[25-Nov-2025 04:20:21 Europe/Berlin] place-order.php: Order created with ID: 18
+[25-Nov-2025 04:20:21 Europe/Berlin] place-order.php: Adding item - ID: 2, Name: CAMERA VELAT, Qty: 1
+[25-Nov-2025 04:20:21 Europe/Berlin] place-order.php: Order completed successfully
+[25-Nov-2025 04:42:06 Europe/Berlin] place-order.php: Started
+[25-Nov-2025 04:42:06 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":3,"name":"Audrey","quantity":1}]}
+[25-Nov-2025 04:42:06 Europe/Berlin] place-order.php: User ID: 2
+[25-Nov-2025 04:42:06 Europe/Berlin] place-order.php: User data: {"first_name":"faith","last_name":"saludaga","phone":"0923232323","address":"ylaya ibabao"}
+[25-Nov-2025 04:42:06 Europe/Berlin] place-order.php: Creating order - Name: faith saludaga, Phone: 0923232323, Items: 1
+[25-Nov-2025 04:42:06 Europe/Berlin] place-order.php: Order created with ID: 19
+[25-Nov-2025 04:42:06 Europe/Berlin] place-order.php: Adding item - ID: 3, Name: Audrey, Qty: 1
+[25-Nov-2025 04:42:06 Europe/Berlin] place-order.php: Order completed successfully
+[25-Nov-2025 05:34:58 Europe/Berlin] place-order.php: Started
+[25-Nov-2025 05:34:58 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":6,"name":"cable wire","quantity":1}]}
+[25-Nov-2025 05:34:58 Europe/Berlin] place-order.php: User ID: 7
+[25-Nov-2025 05:34:58 Europe/Berlin] place-order.php: User data: {"first_name":"faith","last_name":"saludaga","phone":"0923232323","address":"purok mahugumaon"}
+[25-Nov-2025 05:34:58 Europe/Berlin] place-order.php: Creating order - Name: faith saludaga, Phone: 0923232323, Items: 1
+[25-Nov-2025 05:34:58 Europe/Berlin] place-order.php: Order created with ID: 20
+[25-Nov-2025 05:34:58 Europe/Berlin] place-order.php: Adding item - ID: 6, Name: cable wire, Qty: 1
+[25-Nov-2025 05:34:58 Europe/Berlin] place-order.php: Order completed successfully
+[26-Nov-2025 15:23:27 Europe/Berlin] place-order.php: Started
+[26-Nov-2025 15:23:27 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":6,"name":"cable wire","quantity":1}]}
+[26-Nov-2025 15:23:27 Europe/Berlin] place-order.php: User ID: 7
+[26-Nov-2025 15:23:27 Europe/Berlin] place-order.php: User data: {"first_name":"faith","last_name":"saludaga","phone":"0923232323","address":"purok mahugumaon"}
+[26-Nov-2025 15:23:27 Europe/Berlin] place-order.php: Creating order - Name: faith saludaga, Phone: 0923232323, Items: 1
+[26-Nov-2025 15:23:27 Europe/Berlin] place-order.php: Order created with ID: 21
+[26-Nov-2025 15:23:27 Europe/Berlin] place-order.php: Adding item - ID: 6, Name: cable wire, Qty: 1
+[26-Nov-2025 15:23:27 Europe/Berlin] place-order.php: Order completed successfully
+[01-Dec-2025 12:08:05 Europe/Berlin] place-order.php: Started
+[01-Dec-2025 12:08:05 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":1,"name":"Dome Camera","quantity":1}]}
+[01-Dec-2025 12:08:05 Europe/Berlin] place-order.php: User ID: 3
+[01-Dec-2025 12:08:05 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09293213321","address":"dadsad"}
+[01-Dec-2025 12:08:05 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09293213321, Items: 1
+[01-Dec-2025 12:08:05 Europe/Berlin] place-order.php: Exception: Unknown column 'total_amount' in 'field list'
+[01-Dec-2025 12:08:24 Europe/Berlin] place-order.php: Started
+[01-Dec-2025 12:08:24 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":1,"name":"Dome Camera","quantity":1}]}
+[01-Dec-2025 12:08:24 Europe/Berlin] place-order.php: User ID: 3
+[01-Dec-2025 12:08:24 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09293213321","address":"dadsad"}
+[01-Dec-2025 12:08:24 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09293213321, Items: 1
+[01-Dec-2025 12:08:24 Europe/Berlin] place-order.php: Exception: Unknown column 'total_amount' in 'field list'
+[01-Dec-2025 12:12:07 Europe/Berlin] place-order.php: Started
+[01-Dec-2025 12:12:07 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":1,"name":"Dome Camera","quantity":1}]}
+[01-Dec-2025 12:12:07 Europe/Berlin] place-order.php: User ID: 3
+[01-Dec-2025 12:12:07 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09293213321","address":"dadsad"}
+[01-Dec-2025 12:12:07 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09293213321, Items: 1
+[01-Dec-2025 12:12:07 Europe/Berlin] place-order.php: Exception: Unknown column 'total_amount' in 'field list'
+[01-Dec-2025 12:13:49 Europe/Berlin] place-order.php: Started
+[01-Dec-2025 12:13:49 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":1,"name":"Dome Camera","quantity":1}]}
+[01-Dec-2025 12:13:49 Europe/Berlin] place-order.php: User ID: 3
+[01-Dec-2025 12:13:49 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09293213321","address":"dadsad"}
+[01-Dec-2025 12:13:49 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09293213321, Items: 1
+[01-Dec-2025 12:13:49 Europe/Berlin] place-order.php: Exception: Unknown column 'total_amount' in 'field list'
+[01-Dec-2025 12:14:27 Europe/Berlin] place-order.php: Started
+[01-Dec-2025 12:14:27 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":1,"name":"Dome Camera","quantity":1}]}
+[01-Dec-2025 12:14:27 Europe/Berlin] place-order.php: User ID: 3
+[01-Dec-2025 12:14:27 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09293213321","address":"dadsad"}
+[01-Dec-2025 12:14:27 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09293213321, Items: 1
+[01-Dec-2025 12:14:27 Europe/Berlin] place-order.php: Exception: Unknown column 'total_amount' in 'field list'
+[01-Dec-2025 12:15:29 Europe/Berlin] place-order.php: Started
+[01-Dec-2025 12:15:29 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":1,"name":"Dome Camera","quantity":1}]}
+[01-Dec-2025 12:15:29 Europe/Berlin] place-order.php: User ID: 3
+[01-Dec-2025 12:15:29 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09293213321","address":"dadsad"}
+[01-Dec-2025 12:15:29 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09293213321, Items: 1
+[01-Dec-2025 12:15:29 Europe/Berlin] place-order.php: Order created with ID: 1
+[01-Dec-2025 12:15:29 Europe/Berlin] place-order.php: Adding item - ID: 1, Name: Dome Camera, Qty: 1
+[01-Dec-2025 12:15:29 Europe/Berlin] place-order.php: Order completed successfully
+[01-Dec-2025 14:40:53 Europe/Berlin] place-order.php: Started
+[01-Dec-2025 14:40:53 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":"4","name":"DH-IPC-HFW2249TL-S-PRO DAHUA","quantity":1}]}
+[01-Dec-2025 14:40:53 Europe/Berlin] place-order.php: User ID: 4
+[01-Dec-2025 14:40:53 Europe/Berlin] place-order.php: User data: {"first_name":"faith","last_name":"saludaga","phone":"09198502706","address":"sfafafasffsassffa"}
+[01-Dec-2025 14:40:53 Europe/Berlin] place-order.php: Creating order - Name: faith saludaga, Phone: 09198502706, Items: 1
+[01-Dec-2025 14:40:53 Europe/Berlin] place-order.php: Order created with ID: 2
+[01-Dec-2025 14:40:53 Europe/Berlin] place-order.php: Adding item - ID: 4, Name: DH-IPC-HFW2249TL-S-PRO DAHUA, Qty: 1
+[01-Dec-2025 14:40:53 Europe/Berlin] place-order.php: Order completed successfully
+[03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: Started
+[03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":3,"name":"CCTV DOME","quantity":1}]}
+[03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: User ID: 3
+[03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: User data: {"first_name":"Joshua","last_name":"Augustine Calago","phone":"09293213321","address":"Ylaya, Ibabao, Cordova"}
+[03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: Creating order - Name: Joshua Augustine Calago, Phone: 09293213321, Items: 1
+[03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: Order created with ID: 1
+[03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: Adding item - ID: 3, Name: CCTV DOME, Qty: 1
+[03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: Order completed successfully

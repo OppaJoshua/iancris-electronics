@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate IanCris Favicon</title>
+</head>
+<body>
+    <canvas id="canvas" width="64" height="64" style="border: 1px solid #ccc;"></canvas>
+    <br>
+    <button onclick="downloadFavicon()">Download as favicon.ico</button>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Blue gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 64, 64);
+        gradient.addColorStop(0, '#2563EB');
+        gradient.addColorStop(1, '#1E40AF');
+        
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 64, 64);
+        
+        // Camera lens design
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+        ctx.beginPath();
+        ctx.arc(32, 32, 20, 0, Math.PI * 2);
+        ctx.fill();
+        
+        ctx.fillStyle = '#2563EB';
+        ctx.beginPath();
+        ctx.arc(32, 32, 14, 0, Math.PI * 2);
+        ctx.fill();
+        
+        ctx.fillStyle = '#1E40AF';
+        ctx.beginPath();
+        ctx.arc(32, 32, 8, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // White text "IC"
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 20px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('IC', 32, 32);
+        
+        function downloadFavicon() {
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'favicon.png';
+                a.click();
+            });
+        }
+    </script>
+</body>
+</html>
