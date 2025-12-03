@@ -1,0 +1,3 @@
+ALTER TABLE users 
+ADD COLUMN verification_code VARCHAR(6) NULL,
+ADD COLUMN code_expiry DATETIME NULL;

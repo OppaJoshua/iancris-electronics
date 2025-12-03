@@ -140,3 +140,11 @@
 [03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: Order created with ID: 1
 [03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: Adding item - ID: 3, Name: CCTV DOME, Qty: 1
 [03-Dec-2025 10:24:34 Europe/Berlin] place-order.php: Order completed successfully
+[03-Dec-2025 12:38:58 Europe/Berlin] place-order.php: Started
+[03-Dec-2025 12:38:58 Europe/Berlin] place-order.php: Input received: {"cart":[{"id":3,"name":"CCTV DOME","quantity":1}]}
+[03-Dec-2025 12:38:58 Europe/Berlin] place-order.php: User ID: 8
+[03-Dec-2025 12:38:58 Europe/Berlin] place-order.php: User data: {"first_name":"JonaMarie","last_name":"Bayutas","phone":"09921234523","address":"Ylaya, Ibabao, Cordova Cebu City"}
+[03-Dec-2025 12:38:58 Europe/Berlin] place-order.php: Creating order - Name: JonaMarie Bayutas, Phone: 09921234523, Items: 1
+[03-Dec-2025 12:38:58 Europe/Berlin] place-order.php: Order created with ID: 2
+[03-Dec-2025 12:38:58 Europe/Berlin] place-order.php: Adding item - ID: 3, Name: CCTV DOME, Qty: 1
+[03-Dec-2025 12:38:58 Europe/Berlin] place-order.php: Order completed successfully

@@ -153,6 +153,10 @@ if (!$tables_exist || $tables_exist->num_rows == 0) {
         google_id VARCHAR(255),
         role ENUM('user', 'admin') DEFAULT 'user',
         status ENUM('active', 'blocked') DEFAULT 'active',
+        email_verified TINYINT(1) DEFAULT 0,
+        verification_code VARCHAR(6) NULL,
+        code_expiry DATETIME NULL,
+        last_login DATETIME NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
     
@@ -273,6 +277,41 @@ if (!$tables_exist || $tables_exist->num_rows == 0) {
         log_debug("Added status column to users table");
     }
     
+    // Add email_verified column if it doesn't exist
+    $check_email_verified = @$conn->query("SHOW COLUMNS FROM users LIKE 'email_verified'");
+    if (!$check_email_verified || $check_email_verified->num_rows == 0) {
+        $conn->query("ALTER TABLE users ADD COLUMN email_verified TINYINT(1) DEFAULT 0 AFTER status");
+        log_debug("Added email_verified column to users table");
+    }
+    
+    // Add verification_code column if it doesn't exist
+    $check_verification = @$conn->query("SHOW COLUMNS FROM users LIKE 'verification_code'");
+    if (!$check_verification || $check_verification->num_rows == 0) {
+        $conn->query("ALTER TABLE users ADD COLUMN verification_code VARCHAR(6) NULL AFTER email_verified");
+        log_debug("Added verification_code column to users table");
+    }
+    
+    // Add code_expiry column if it doesn't exist
+    $check_expiry = @$conn->query("SHOW COLUMNS FROM users LIKE 'code_expiry'");
+    if (!$check_expiry || $check_expiry->num_rows == 0) {
+        $conn->query("ALTER TABLE users ADD COLUMN code_expiry DATETIME NULL AFTER verification_code");
+        log_debug("Added code_expiry column to users table");
+    }
+    
+    // Add last_login column if it doesn't exist
+    $check_last_login = @$conn->query("SHOW COLUMNS FROM users LIKE 'last_login'");
+    if (!$check_last_login || $check_last_login->num_rows == 0) {
+        $conn->query("ALTER TABLE users ADD COLUMN last_login DATETIME NULL AFTER code_expiry");
+        log_debug("Added last_login column to users table");
+    }
+    
+    // Add firebase_uid column if it doesn't exist
+    $check_firebase = @$conn->query("SHOW COLUMNS FROM users LIKE 'firebase_uid'");
+    if (!$check_firebase || $check_firebase->num_rows == 0) {
+        $conn->query("ALTER TABLE users ADD COLUMN firebase_uid VARCHAR(128) NULL AFTER last_login");
+        log_debug("Added firebase_uid column to users table");
+    }
+    
     // Add latitude and longitude columns to gallery table if they don't exist
     $check_lat = @$conn->query("SHOW COLUMNS FROM gallery LIKE 'latitude'");
     if (!$check_lat || $check_lat->num_rows == 0) {
@@ -291,6 +330,10 @@ if (!$tables_exist || $tables_exist->num_rows == 0) {
     if ($result && $conn->affected_rows > 0) {
         log_debug("Updated joshuacalago649@gmail.com to admin role");
     }
+    
+    // REMOVE THIS LINE - Don't auto-verify users anymore
+    // $conn->query("UPDATE users SET email_verified = 1 WHERE email_verified = 0");
+    // log_debug("Set existing users as email verified");
 }
 
 $conn->query("SET FOREIGN_KEY_CHECKS = 1");
