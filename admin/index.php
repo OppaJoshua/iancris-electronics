@@ -12,6 +12,8 @@ require_once '../config/database.php';
 // Get statistics
 $total_products = 0;
 $total_users = 0;
+$verified_users = 0;
+$unverified_users = 0;
 $total_orders = 0;
 $pending_orders = 0;
 
@@ -20,10 +22,20 @@ if ($products_result) {
     $total_products = $products_result->fetch_assoc()['count'];
 }
 
+// Count ALL regular users (including unverified)
 $users_result = $conn->query("SELECT COUNT(*) as count FROM users WHERE role = 'user'");
 if ($users_result) {
     $total_users = $users_result->fetch_assoc()['count'];
 }
+
+// Count verified users
+$verified_result = $conn->query("SELECT COUNT(*) as count FROM users WHERE role = 'user' AND email_verified = 1");
+if ($verified_result) {
+    $verified_users = $verified_result->fetch_assoc()['count'];
+}
+
+// Count unverified users
+$unverified_users = $total_users - $verified_users;
 
 $orders_result = $conn->query("SELECT COUNT(*) as count FROM orders");
 if ($orders_result) {
@@ -35,9 +47,13 @@ if ($pending_result) {
     $pending_orders = $pending_result->fetch_assoc()['count'];
 }
 
-// Get recent users
+// Get recent users (show ALL users, not just verified)
 $recent_users = array();
-$recent_query = "SELECT id, first_name, last_name, email, google_id, created_at FROM users WHERE role = 'user' ORDER BY created_at DESC LIMIT 5";
+$recent_query = "SELECT id, first_name, last_name, email, google_id, firebase_uid, email_verified, created_at 
+                 FROM users 
+                 WHERE role = 'user' 
+                 ORDER BY created_at DESC 
+                 LIMIT 5";
 $recent_result = $conn->query($recent_query);
 if ($recent_result) {
     while ($row = $recent_result->fetch_assoc()) {
@@ -171,10 +187,13 @@ if ($recent_result) {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                                 </svg>
                             </div>
-                            <span class="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">+8%</span>
+                            <span class="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full"><?php echo $verified_users; ?> verified</span>
                         </div>
                         <h3 class="text-gray-600 text-sm font-medium mb-1">Total Users</h3>
                         <p class="text-3xl font-bold text-gray-900"><?php echo $total_users; ?></p>
+                        <?php if ($unverified_users > 0): ?>
+                        <p class="text-xs text-yellow-600 mt-1"><?php echo $unverified_users; ?> pending verification</p>
+                        <?php endif; ?>
                     </div>
 
                     <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition">
@@ -248,9 +267,28 @@ if ($recent_result) {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"><?php echo htmlspecialchars($user['email']); ?></td>
                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                <?php if (!empty($user['google_id'])): ?>
+                                                <div>
+                                                    <p class="text-sm text-gray-900"><?php echo htmlspecialchars($user['email']); ?></p>
+                                                    <?php if ($user['email_verified']): ?>
+                                                        <span class="inline-flex items-center text-xs text-green-600">
+                                                            <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                                            </svg>
+                                                            Verified
+                                                        </span>
+                                                    <?php else: ?>
+                                                        <span class="inline-flex items-center text-xs text-yellow-600">
+                                                            <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                                            </svg>
+                                                            Unverified
+                                                        </span>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                <?php if (!empty($user['firebase_uid']) || !empty($user['google_id'])): ?>
                                                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
                                                         <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                                             <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0z"/>

@@ -28,8 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
         $error = "Please fill in all required fields";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = "Please enter a valid email address";
-    } elseif (!empty($phone) && !preg_match('/^[0-9]{12}$/', $phone)) {
-        $error = "Phone number must be exactly 12 digits";
+    } elseif (!empty($phone) && !preg_match('/^[0-9]{11}$/', $phone)) {
+        $error = "Phone number must be exactly 11 digits";
     } elseif (strlen($password) < 6) {
         $error = "Password must be at least 6 characters long";
     } elseif ($password !== $confirm_password) {
@@ -158,11 +158,11 @@ require_once '../includes/nav.php';
                 <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
                 <input type="tel" name="phone" id="phone" 
                     value="<?php echo isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : ''; ?>"
-                    pattern="[0-9]{12}"
-                    maxlength="12"
-                    placeholder="123456789012"
+                    pattern="[0-9]{11}"
+                    maxlength="11"
+                    placeholder="09123456789"
                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                <p class="mt-1 text-xs text-gray-500">Must be exactly 12 digits (e.g., 639123456789)</p>
+                <p class="mt-1 text-xs text-gray-500">Must be exactly 11 digits (e.g., 09123456789)</p>
             </div>
             
             <div>
@@ -264,18 +264,18 @@ document.getElementById('phone').addEventListener('input', function(e) {
     // Remove non-numeric characters
     let value = e.target.value.replace(/\D/g, '');
     
-    // Limit to 12 digits
-    if (value.length > 12) {
-        value = value.slice(0, 12);
+    // Limit to 11 digits
+    if (value.length > 11) {
+        value = value.slice(0, 11);
     }
     
     e.target.value = value;
     
     // Visual feedback
-    if (value.length > 0 && value.length !== 12) {
+    if (value.length > 0 && value.length !== 11) {
         e.target.classList.add('border-yellow-400');
         e.target.classList.remove('border-gray-300', 'border-green-400');
-    } else if (value.length === 12) {
+    } else if (value.length === 11) {
         e.target.classList.add('border-green-400');
         e.target.classList.remove('border-gray-300', 'border-yellow-400');
     } else {

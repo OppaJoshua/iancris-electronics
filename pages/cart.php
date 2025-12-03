@@ -90,9 +90,11 @@ require_once '../config/database.php';
                     <div>
                         <label class="block text-xs font-medium text-gray-700 mb-1">Phone Number *</label>
                         <input type="tel" id="phoneInput" required 
-                               pattern="[0-9]{10,11}" 
+                               pattern="[0-9]{11}" 
+                               maxlength="11"
                                placeholder="09123456789"
                                class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <p class="text-xs text-gray-500 mt-1">11 digits (e.g., 09123456789)</p>
                     </div>
                 </div>
 
@@ -604,6 +606,31 @@ function placeOrder() {
         alert('Error placing order: ' + error.message + '\n\nPlease check:\n1. Browser console for details\n2. Make sure place-order.php exists\n3. Check PHP error logs');
     });
 }
+
+// Add phone number validation
+document.getElementById('phoneInput').addEventListener('input', function(e) {
+    // Remove non-numeric characters
+    let value = e.target.value.replace(/\D/g, '');
+    
+    // Limit to 11 digits
+    if (value.length > 11) {
+        value = value.slice(0, 11);
+    }
+    
+    e.target.value = value;
+    
+    // Visual feedback
+    if (value.length > 0 && value.length !== 11) {
+        e.target.classList.add('border-yellow-400');
+        e.target.classList.remove('border-gray-300', 'border-green-400');
+    } else if (value.length === 11) {
+        e.target.classList.add('border-green-400');
+        e.target.classList.remove('border-gray-300', 'border-yellow-400');
+    } else {
+        e.target.classList.add('border-gray-300');
+        e.target.classList.remove('border-yellow-400', 'border-green-400');
+    }
+});
 </script>
 
 <?php require_once '../includes/footer.php'; ?>

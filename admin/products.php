@@ -328,11 +328,26 @@ $categories_result = $conn->query($categories_sql);
         /* Product card hover effects */
         .product-card {
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
         }
         
         .product-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            z-index: 2;
+        }
+        
+        /* Filter section needs higher z-index */
+        .filter-section {
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Ensure dropdowns appear above everything */
+        select {
+            position: relative;
+            z-index: 50;
         }
     </style>
 </head>
@@ -425,7 +440,7 @@ $categories_result = $conn->query($categories_sql);
             <main class="flex-1 overflow-y-auto p-8">
                 <div class="bg-white rounded-xl shadow-sm border border-gray-200">
                     <!-- Search & Filter Bar -->
-                    <div class="p-6 border-b border-gray-200 bg-gray-50">
+                    <div class="p-6 border-b border-gray-200 bg-gray-50 filter-section">
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Search Products</label>
@@ -494,7 +509,7 @@ $categories_result = $conn->query($categories_sql);
                                         </span>
                                     </div>
                                     <!-- Only Edit button - Status changes handled in edit modal -->
-                                    <button onclick='openEditModalFromCard(this)' class="w-full text-center bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 transition font-semibold flex items-center justify-center gap-2">
+                                    <button onclick='openEditModalFromCard(this)' class="w-full text-center bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 transition font-medium flex items-center justify-center gap-2">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                                         </svg>
